@@ -4,28 +4,5 @@ You need to enable the members feature first.
 --}}
 
 <div class="m-subscribe-section__form">
-  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
-    <div class="m-subscribe__form">
-      <div class="pos-relative">
-        <label for="newsletter-input" class="sr-only">{{t "Your email address"}}</label>
-        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
-          placeholder="{{t "Your email address"}}" required />
-      </div>
-      <button id="newsletter-button" class="m-button primary block" type="submit">{{t "Subscribe"}}</button>
-    </div>
-    <div class="m-subscribe__success">
-      <header class="m-heading no-margin">
-        <img src="{{asset "images/success.png"}}" alt="Success!" class="m-subscribe__success_icon">
-        <p class="m-heading__description in-newsletter-form">
-          {{t "Now check your inbox and click the link to confirm your subscription."}}
-        </p>
-      </header>
-    </div>
-    <p class="m-subscribe__invalid m-small-text">
-      {{t "Please enter a valid email address"}}
-    </p>
-    <p class="m-subscribe__error m-small-text">
-      {{t "Oops! There was an error sending the email, please try later."}}
-    </p>
-  </form>
+  <iframe src="https://candost.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:#b6b7f6;" frameborder="0" scrolling="no"></iframe>
 </div>
