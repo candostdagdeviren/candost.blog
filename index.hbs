@@ -35,13 +35,10 @@ into the {body} of the default.hbs template --}}
     {{/if}}
     <header class="m-heading in-subscribe-page">
       <p class="m-heading__description in-subscribe-page">
-        Subscribe to monthly news and learnings about software engineering and leadership.
+        Subscribe to my newsletter and stay up to date on software engineering career growth and leadership.
       </p>
     </header>
     <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
-    <form action="https://www.buymeacoffee.com/candost">
-      <button id="buy-me-a-coffee-button" class="m-button outlined block" type="submit">{{t "Buy me a Coffee"}}</button>
-    </form>
 
   </div>
   </section>
@@ -95,7 +92,7 @@ into the {body} of the default.hbs template --}}
                           <div class="m-featured-article__timestamp">
                             <span>{{date published_at timeago="true"}}</span>
                             <span>&bull;</span>
-                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% mins read")}}</span>
                           </div>
                         </a>
                       </article>
@@ -161,7 +158,7 @@ into the {body} of the default.hbs template --}}
                           <div class="m-featured-article__timestamp">
                             <span>{{date published_at timeago="true"}}</span>
                             <span>&bull;</span>
-                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% mins read")}}</span>
                           </div>
                         </a>
                       </article>

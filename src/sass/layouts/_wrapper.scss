@@ -1,7 +1,10 @@
 .l-wrapper {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
   padding: 0 $mobile-space;
 
   @include respond-to('medium') {
