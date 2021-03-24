@@ -8,7 +8,7 @@
   @extend .content-centered;
 
   @include respond-to('medium') {
-    min-height: 400px;
+    min-height: 200px;
     padding: 150px 0 75px;
   }
 
