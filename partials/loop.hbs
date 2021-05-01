@@ -37,9 +37,11 @@
 
 
 <div>
+  {{#is "index"}}
   <h1>
-    Previous Articles
+    Previously on Candost's Space
   </h1>
+  {{/is}}
 <ul>
 {{#foreach posts visibility="all" from="4"}}
   <li class="{{post_class}}">
