@@ -17,9 +17,6 @@
             {{title}}
           </h2>
         </div>
-        <div class="m-article-card__timestamp">
-          <span>{{date published_at timeago="true"}}</span>
-        </div>
       </a>
     </div>
   </article>
@@ -37,11 +34,6 @@
 
 
 <div>
-  {{#is "index"}}
-  <h1>
-    Previously on Candost's Space
-  </h1>
-  {{/is}}
 <ul>
 {{#foreach posts visibility="all" from="4"}}
   <li class="{{post_class}}">
