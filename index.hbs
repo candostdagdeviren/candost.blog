@@ -28,9 +28,12 @@ into the {body} of the default.hbs template --}}
   {{> hero background=@site.cover_image}}
   <div class="m-hero__content">
     <h1 class="m-hero-title bigger">{{@site.title}}</h1>
+    {{#if @site.description}}
+      <p class="m-hero-description bigger">{{@site.description}}</p>
+    {{/if}}
     <header class="m-heading in-subscribe-page">
       <p class="m-heading__description in-subscribe-page">
-        Join ~400 people and get regular and short emails that focuses on improving your <b>senior+ software engineering</b> and <b>leadership</b> career.
+        Join ~400 people and get biweekly emails that focuses on improving your <b>senior+ software engineering</b> and <b>leadership</b> career in 5 minutes.
       </p>
     </header>
     <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
