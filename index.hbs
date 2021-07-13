@@ -31,15 +31,19 @@ into the {body} of the default.hbs template --}}
     {{#if @site.description}}
       <p class="m-hero-description bigger">{{@site.description}}</p>
     {{/if}}
-    <header class="m-heading in-subscribe-page">
-      <p class="m-heading__description in-subscribe-page">
-        Join ~400 people and get biweekly emails that focuses on improving your <b>senior+ software engineering</b> and <b>leadership</b> career in 5 minutes.
-      </p>
-    </header>
-    <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
   </div>
   </section>
   <div class="l-content">
+    <div class="subscribe-form" style="background-color: var(--subscribe-background); padding: 30px 0 20px;">
+        <header class="m-heading in-subscribe-page">
+          <p class="m-heading__description in-subscribe-page" style="margin-bottom: 20px; max-width:600px">
+            Join ~400 people and get biweekly emails that focuses on improving your <b>senior+ software engineering</b> and <b>leadership</b> career in 5 minutes.
+          </p>
+        </header>
+        <div style="margin: auto; max-width: fit-content">
+          <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
+        </div>
+      </div>
     <div class="l-wrapper">
       <div class="l-grid centered">
         {{#get "pages" filter="featured:true" include="authors,tags" limit="5" as |featured_pages|}}
