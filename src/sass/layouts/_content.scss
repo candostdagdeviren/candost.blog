@@ -1,7 +1,7 @@
 .l-content {
-  padding: 40px 0 20px;
+  padding: 0px 0 0px;
 
-  @include respond-to('medium') {
+  &.in-post {
     padding: 60px 0 40px;
   }
 }
