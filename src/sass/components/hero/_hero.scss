@@ -3,13 +3,13 @@
   flex-direction: column;
   min-height: 365px;
   overflow: hidden;
-  padding: 75px 0 20px;
+  padding: 120px 0 35px;
   background-color: var(--secondary-subtle-color);
   @extend .content-centered;
 
   @include respond-to('medium') {
     min-height: 200px;
-    padding: 75px 0 20px;
+    padding: 120px 0 35px;
   }
 
   &.with-picture {
