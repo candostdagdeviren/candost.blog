@@ -73,7 +73,7 @@ into the {body} of the default.hbs template --}}
                         </div>
                         <div class="m-featured-article__meta">
                           {{#if primary_tag}}
-                            <a href="{{primary_tag.url}}" class="m-featured-article__tag">{{primary_tag.name}}</a>
+                            <p class="m-featured-article__tag">{{primary_tag.name}}</p>
                           {{/if}}
                         </div>
                         <a href="{{url}}" class="m-featured-article__content">
@@ -122,15 +122,8 @@ into the {body} of the default.hbs template --}}
                           {{/if}}
                         </div>
                         <div class="m-featured-article__meta">
-                          <a href="{{primary_author.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
-                            {{#if primary_author.profile_image}}
-                              <div style="background-image: url({{img_url primary_author.profile_image size="xs"}});"></div>
-                            {{else}}
-                              <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
-                            {{/if}}
-                          </a>
                           {{#if primary_tag}}
-                            <a href="{{primary_tag.url}}" class="m-featured-article__tag">{{primary_tag.name}}</a>
+                            <p class="m-featured-article__tag">{{primary_tag.name}}</p>
                           {{/if}}
                         </div>
                         <div class="m-featured-article__ribbon">
@@ -168,7 +161,7 @@ into the {body} of the default.hbs template --}}
       <div class="favorite-posts l-grid centered">
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/medium/" class="m-article-card__tag">Medium</a>
+            <p class="m-article-card__tag">Medium</p>
             <a href="https://candost.blog/how-to-stop-endless-discussions/" class="m-article-card__info-link" aria-label="How to Stop Endless Discussions">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="How to Stop Endless Discussions">
@@ -180,7 +173,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/medium/" class="m-article-card__tag">Medium</a>
+            <p class="m-article-card__tag">Medium</p>
             <a href="https://candost.blog/prioritization-skills-for-senior-and-staff-software-engineers/" class="m-article-card__info-link" aria-label="Prioritization Skills for Senior and Staff Software Engineers">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="Prioritization Skills for Senior and Staff Software Engineers">
@@ -192,7 +185,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/medium/" class="m-article-card__tag">Medium</a>
+            <p class="m-article-card__tag">Medium</p>
             <a href="https://candost.blog/effective-1-on-1-meetings-own-your-one-on-one-meeting/" class="m-article-card__info-link" aria-label="Effective 1:1 Meetings - Own Your One-on-One Meeting">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="Effective 1:1 Meetings - Own Your One-on-One Meeting">
@@ -207,7 +200,7 @@ into the {body} of the default.hbs template --}}
       <div class="leadership-and-organizational l-grid centered">
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/long/" class="m-article-card__tag">Long</a>
+            <p class="m-article-card__tag">Long</p>
             <a href="https://candost.blog/swc-14-protective-leadership-finding-your-leadership-style/" class="m-article-card__info-link" aria-label="Protective Leadership & Finding Your Leadership Style">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="Protective Leadership & Finding Your Leadership Style">
@@ -219,7 +212,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/short/" class="m-article-card__tag">Short</a>
+            <p class="m-article-card__tag">Short</p>
             <a href="https://candost.blog/communicating-decisions-in-the-organizations/" class="m-article-card__info-link" aria-label="Communicating Decisions In The Organizations">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="Communicating Decisions In The Organizations">
@@ -231,7 +224,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/medium/" class="m-article-card__tag">Medium</a>
+            <p class="m-article-card__tag">Medium</p>
             <a href="https://candost.blog/how-to-solve-and-prevent-conflicts/" class="m-article-card__info-link" aria-label="How to Solve and Prevent Conflicts?">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="How to Solve and Prevent Conflicts?">
@@ -246,7 +239,7 @@ into the {body} of the default.hbs template --}}
       <div class="career l-grid centered">
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/medium/" class="m-article-card__tag">Medium</a>
+            <p class="m-article-card__tag">Medium</p>
             <a href="https://candost.blog/how-to-handle-and-overcome-objections-to-your-proposal-at-work/" class="m-article-card__info-link" aria-label="How to Handle and Overcome Objections to Your Proposal at Work">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="How to Handle and Overcome Objections to Your Proposal at Work">
@@ -258,7 +251,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/short/" class="m-article-card__tag">Short</a>
+            <p class="m-article-card__tag">Short</p>
             <a href="https://candost.blog/deciding-on-what-you-should-focus-on-next/" class="m-article-card__info-link" aria-label="Deciding on What You Should Focus on Next">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="Deciding on What You Should Focus on Next">
@@ -270,7 +263,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/short/" class="m-article-card__tag">Short</a>
+            <p class="m-article-card__tag">Short</p>
             <a href="https://candost.blog/how-to-organize-your-engineering-teams-documents/" class="m-article-card__info-link" aria-label="How to organize the engineering team's documentation?">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="How to organize the engineering team's documentation?">
@@ -285,7 +278,7 @@ into the {body} of the default.hbs template --}}
       <div class="ios-articles l-grid centered">
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/long/" class="m-article-card__tag">Long</a>
+            <p class="m-article-card__tag">Long</p>
             <a href="https://candost.blog/generics-in-swift/" class="m-article-card__info-link" aria-label="Generics in Swift">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="Generics in Swift">
@@ -297,7 +290,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/long/" class="m-article-card__tag">Long</a>
+            <p class="m-article-card__tag">Long</p>
             <a href="https://candost.blog/view-lifecycle-in-ios/" class="m-article-card__info-link" aria-label="View Lifecycle in iOS">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="View Lifecycle in iOS">
@@ -309,7 +302,7 @@ into the {body} of the default.hbs template --}}
         </article>
         <article class="m-article-card {{post_class}}">
           <div class="m-article-card__info">
-            <a href="https://candost.blog/long/" class="m-article-card__tag">Long</a>
+            <p class="m-article-card__tag">Long</p>
             <a href="https://candost.blog/ios-application-lifecycle/" class="m-article-card__info-link" aria-label="iOS Application Lifecycle">
               <div>
                 <h2 class="m-article-card__title js-article-card-title" title="iOS Application Lifecycle">

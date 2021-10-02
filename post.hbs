@@ -71,7 +71,7 @@ into the {body} of the default.hbs template --}}
         <header class="m-heading">
           <div class="m-heading__meta">
             {{#if primary_tag}}
-              <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
+              <p class="m-heading__meta__tag">{{primary_tag.name}}</p>
               <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
             {{/if}}
             <span class="m-heading__meta__time">{{date published_at}}</span>
