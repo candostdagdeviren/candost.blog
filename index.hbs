@@ -33,293 +33,131 @@ into the {body} of the default.hbs template --}}
     {{/if}}
   </div>
   </section>
-  <div class="l-content">
-    <div class="subscribe-form" style="background-color: var(--subscribe-background); padding: 30px 0 20px;">
-        <header class="m-heading in-subscribe-page">
-          <p class="m-heading__description in-subscribe-page" style="margin-bottom: 20px; max-width:600px">
-            <p style="font-size: 18px;"><b>Letters to software engineers who want to become leaders in the software industry.</b></p>
-            <p>Every second Tuesday, receive actionable emails that you can read in 5 to 10 minutes for free.</p>
-          </p>
-        </header>
-        <div class="m-newsletter">
-          <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
+  <div class="l-wrapper">
+    <div class="subscribe-form" style="padding: 30px 0 20px;">
+      <div class="m-newsletter">
+        <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
+      </div>
+    </div>
+    <div class="l-wrapper">
+      <h1>Hi 👋, I'm Candost.</h1>
+
+      <h2>I am a software engineer, team leader, and writer.</h2><br \>
+
+      <p style="font-size: 1.25rem;">I used to think that reading will make me smart.</p><br \>
+
+      <p style="font-size: 1.25rem;">One day, while reading a book, I realized that I've read that exact book before. After that, my life changed.</p><br \>
+
+      <p style="font-size: 1.25rem;">Now, I don't care how many books I read; I take many notes, connect dots and share what I've found.</p><br \>
+
+      <p style="font-size: 1.25rem;">Meanwhile I work as a Software Engineering Team Lead, leading a team of four people working on Payment Systems at <u><a href="https://jimdo.com/" target="_blank">Jimdo</a></u>.</p>
+      <br \><br \>
+
+      <h2>Want the longer story?</h2>
+      <p style="font-size: 1.25rem;">See <u><a href="https://candost.blog/about/">my "about" page</a></u>.</p>
+      <br \><br \>
+
+      <h2>What am I Doing Now?</h2>
+      <p style="font-size: 1.25rem;">See <u><a href="https://candost.blog/now/">my "now" page</a></u>.</p>
+      <br \><br \>
+
+      <h2>Newest Articles<small style="margin-left: 2em;"><u><a href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
+      <ul>
+      {{#foreach posts visibility="all" limit="6"}}
+        <div class="{{post_class}}">
+          <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+            <div class="m-article-card__timestamp">
+              <li>
+              <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
+                <u>{{title}}</u>
+              </h2>
+              </li>
+            </div>
+          </a>
+        </div>
+      {{/foreach}}
+      </ul>
+      <br \>
+
+      <div class="home-podcast">
+        <h2 style="color: var(--podcast-color)">Software World with Candost Podcast</h2>
+        <p style="font-size: 1.25rem;"><u><a href="/podcast/">Listen here on my site.</a></u></p><br \><br \>
+        <p style="font-size: 1.25rem;">Subscribe at
+            <u><a href="https://podcasts.apple.com/podcast/software-world-with-candost/id1548135276" target="_blank">Apple</a></u>,
+            <u><a href="https://open.spotify.com/show/2IoILbfQYu4dLiQpjEBKXk" target="_blank">Spotify</a></u>,
+            <u><a href="https://overcast.fm/+obEDOdmUA">Overcast</a></u>,
+            <u><a href="https://pca.st/xoxlydtr" target="_blank">PocketCasts</a></u>,
+            <u><a href="https://www.stitcher.com/podcast/software-world-with-candost" target="_blank">Stitcher</a></u>,
+            <u><a href="https://www.breaker.audio/software-world-with-candost" target="_blank">Breaker</a></u>,
+            <u><a href="https://castbox.fm/channel/Software-World-with-Candost-id3715951" target="_blank">Castbox</a></u>,
+            <u><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy85NjFhN2Q0L3BvZGNhc3QvcnNz" target="_blank">Google Podcasts</a></u>,
+            <u><a href="https://anchor.fm/candost" target="_blank">Anchor</a></u>,
+            <u><a href="https://radiopublic.com/software-world-with-candost-WlDeEJ" target="_blank">RadioPublic</a></u>,
+            or <u><a href="https://anchor.fm/s/961a7d4/podcast/rss">copy the master RSS</a></u> to paste into your favorite player.
+          </p><br \>
+
+          <h3>Newest Episodes</h3>
+          <ul>
+          {{#get "posts" filter="tags:podcast" limit="3" visibility="all"}}
+              {{#foreach posts}}
+                <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+                    <li>
+                    <h4 class="m-article-card__title js-article-card-title" title="{{title}}">
+                      <u>{{title}}</u>
+                    </h4>
+                    </li>
+                </a>
+              {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+
+      <h2>My Best Articles<small style="margin-left: 2em;"><u><a href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
+      <ul>
+        {{#get "posts" filter="tags:article" limit="3" visibility="all"}}
+            {{#foreach posts}}
+                <div class="{{post_class}}">
+              <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+                <div class="m-article-card__timestamp">
+                  <li>
+                  <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
+                    <u>{{title}}</u>
+                  </h2>
+                  </li>
+                </div>
+              </a>
+            </div>
+            {{/foreach}}
+        {{/get}}
+      </ul><br \>
+
+      <h2>Book Notes<small style="margin-left: 2em;"><u><a href="https://candost.blog/book-review-and-notes/">SEE ALL</a></u></small></h2>
+      <ul>
+        {{#get "posts" filter="tags:book-review-and-notes" limit="3" visibility="all"}}
+            {{#foreach posts}}
+              <div class="{{post_class}}">
+                <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+                  <div class="m-article-card__timestamp">
+                    <li>
+                    <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
+                      <u>{{title}}</u>
+                    </h2>
+                    </li>
+                  </div>
+                </a>
+              </div>
+            {{/foreach}}
+        {{/get}}
+      </ul><br \>
+
+      <div class="l-wrapper" style="background-color: var(--subscribe-background); padding:40px; position: relative; letter-spacing: 0.2px; font-size: 1.25rem; font-style: italic;">
+        <div class="centered">
+          <h3>My Favorite Quote</h3>
+          <p>“What if the goal was to do better work this week than we did the week before? To make this month better than the last month? For no other reason than because we want to leave the organization in a better state than we found it?” -Simon Sinek</p>
         </div>
       </div>
-    <div class="l-wrapper">
-      <div class="l-grid centered">
-        {{#get "pages" filter="featured:true" include="authors,tags" limit="5" as |featured_pages|}}
-          {{#if featured_pages}}
-            <div class="m-featured-slider glide js-featured-slider">
-              <div class="glide__track" data-glide-el="track">
-                <div class="m-featured-slider__list glide__slides">
-                  {{#foreach featured_pages}}
-                    <div class="m-featured-slider__list__item glide__slide js-featured-slide">
-                      <article class="m-featured-article {{#unless feature_image}}no-picture{{/unless}}">
-                        <div class="m-featured-article__picture">
-                          {{#if feature_image}}
-                            <style>
-                              #featured-bg-{{id}} {
-                                background-image: url({{img_url feature_image size='l'}});
-                              }
 
-                              @media(max-width: 768px) {
-                                #featured-bg-{{id}} {
-                                  background-image: url({{img_url feature_image size='m'}});
-                                }
-                              }
-                            </style>
-                            <div id="featured-bg-{{id}}"></div>
-                          {{/if}}
-                        </div>
-                        <div class="m-featured-article__meta">
-                          {{#if primary_tag}}
-                            <p class="m-featured-article__tag">{{primary_tag.name}}</p>
-                          {{/if}}
-                        </div>
-                        <a href="{{url}}" class="m-featured-article__content">
-                          <h2 class="m-featured-article__title js-featured-article-title" title="{{title}}">
-                            {{title}}
-                          </h2>
-                        </a>
-                      </article>
-                    </div>
-                  {{/foreach}}
-                </div>
-              </div>
-              <div data-glide-el="controls" class="glide__arrows js-featured-slider-controls">
-                <button data-glide-dir="<" class="m-icon-button in-featured-articles glide-prev js-featured-slider-previous" aria-label="{{t "Previous"}}">
-                  <span class="icon-arrow-left" aria-hidden="true"></span>
-                </button>
-                <button data-glide-dir=">" class="m-icon-button in-featured-articles glide-next js-featured-slider-next" aria-label="{{t "Next"}}">
-                  <span class="icon-arrow-right" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
-          {{/if}}
-        {{/get}}
-        {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
-          {{#if featured}}
-            <div class="m-featured-slider glide js-featured-slider">
-              <div class="glide__track" data-glide-el="track">
-                <div class="m-featured-slider__list glide__slides">
-                  {{#foreach featured}}
-                    <div class="m-featured-slider__list__item glide__slide js-featured-slide">
-                      <article class="m-featured-article {{#unless feature_image}}no-picture{{/unless}}">
-                        <div class="m-featured-article__picture">
-                          {{#if feature_image}}
-                            <style>
-                              #featured-bg-{{id}} {
-                                background-image: url({{img_url feature_image size='l'}});
-                              }
-
-                              @media(max-width: 768px) {
-                                #featured-bg-{{id}} {
-                                  background-image: url({{img_url feature_image size='m'}});
-                                }
-                              }
-                            </style>
-                            <div id="featured-bg-{{id}}"></div>
-                          {{/if}}
-                        </div>
-                        <div class="m-featured-article__meta">
-                          {{#if primary_tag}}
-                            <p class="m-featured-article__tag">{{primary_tag.name}}</p>
-                          {{/if}}
-                        </div>
-                        <div class="m-featured-article__ribbon">
-                          <span class="icon-star"></span>
-                          <span>{{t "Featured"}}</span>
-                        </div>
-                        <a href="{{url}}" class="m-featured-article__content">
-                          <h2 class="m-featured-article__title js-featured-article-title" title="{{title}}">
-                            {{title}}
-                          </h2>
-                          <div class="m-featured-article__timestamp">
-                            <span>{{date published_at timeago="true"}}</span>
-                            <span>&bull;</span>
-                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% mins read")}}</span>
-                          </div>
-                        </a>
-                      </article>
-                    </div>
-                  {{/foreach}}
-                </div>
-              </div>
-              <div data-glide-el="controls" class="glide__arrows js-featured-slider-controls">
-                <button data-glide-dir="<" class="m-icon-button in-featured-articles glide-prev js-featured-slider-previous" aria-label="{{t "Previous"}}">
-                  <span class="icon-arrow-left" aria-hidden="true"></span>
-                </button>
-                <button data-glide-dir=">" class="m-icon-button in-featured-articles glide-next js-featured-slider-next" aria-label="{{t "Next"}}">
-                  <span class="icon-arrow-right" aria-hidden="true"></span>
-                </button>
-              </div>
-            </div>
-          {{/if}}
-        {{/get}}
-      </div>
-      <h1>Most Popular</h1>
-      <div class="favorite-posts l-grid centered">
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Medium</p>
-            <a href="https://candost.blog/how-to-stop-endless-discussions/" class="m-article-card__info-link" aria-label="How to Stop Endless Discussions">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="How to Stop Endless Discussions">
-                  How to Stop Endless Discussions
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Medium</p>
-            <a href="https://candost.blog/prioritization-skills-for-senior-and-staff-software-engineers/" class="m-article-card__info-link" aria-label="Prioritization Skills for Senior and Staff Software Engineers">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="Prioritization Skills for Senior and Staff Software Engineers">
-                  Prioritization Skills for Senior and Staff Software Engineers
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Medium</p>
-            <a href="https://candost.blog/effective-1-on-1-meetings-own-your-one-on-one-meeting/" class="m-article-card__info-link" aria-label="Effective 1:1 Meetings - Own Your One-on-One Meeting">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="Effective 1:1 Meetings - Own Your One-on-One Meeting">
-                  Effective 1:1 Meetings - Own Your One-on-One Meeting
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-      </div>
-      <h1>Leadership & Organizational</h1>
-      <div class="leadership-and-organizational l-grid centered">
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Long</p>
-            <a href="https://candost.blog/swc-14-protective-leadership-finding-your-leadership-style/" class="m-article-card__info-link" aria-label="Protective Leadership & Finding Your Leadership Style">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="Protective Leadership & Finding Your Leadership Style">
-                  Protective Leadership & Finding Your Leadership Style
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Short</p>
-            <a href="https://candost.blog/communicating-decisions-in-the-organizations/" class="m-article-card__info-link" aria-label="Communicating Decisions In The Organizations">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="Communicating Decisions In The Organizations">
-                  Communicating Decisions In The Organizations
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Medium</p>
-            <a href="https://candost.blog/how-to-solve-and-prevent-conflicts/" class="m-article-card__info-link" aria-label="How to Solve and Prevent Conflicts?">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="How to Solve and Prevent Conflicts?">
-                  How to Solve and Prevent Conflicts?
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-      </div>
-      <h1>Best for Software Engineering and Leadership Career</h1>
-      <div class="career l-grid centered">
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Medium</p>
-            <a href="https://candost.blog/how-to-handle-and-overcome-objections-to-your-proposal-at-work/" class="m-article-card__info-link" aria-label="How to Handle and Overcome Objections to Your Proposal at Work">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="How to Handle and Overcome Objections to Your Proposal at Work">
-                  How to Handle and Overcome Objections to Your Proposal at Work
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Short</p>
-            <a href="https://candost.blog/deciding-on-what-you-should-focus-on-next/" class="m-article-card__info-link" aria-label="Deciding on What You Should Focus on Next">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="Deciding on What You Should Focus on Next">
-                  Deciding on What You Should Focus on Next
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Short</p>
-            <a href="https://candost.blog/how-to-organize-your-engineering-teams-documents/" class="m-article-card__info-link" aria-label="How to organize the engineering team's documentation?">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="How to organize the engineering team's documentation?">
-                  How to organize the engineering team's documentation?
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-      </div>
-      <h1>Popular iOS & Swift Posts</h1>
-      <div class="ios-articles l-grid centered">
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Long</p>
-            <a href="https://candost.blog/generics-in-swift/" class="m-article-card__info-link" aria-label="Generics in Swift">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="Generics in Swift">
-                  Generics in Swift
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Long</p>
-            <a href="https://candost.blog/view-lifecycle-in-ios/" class="m-article-card__info-link" aria-label="View Lifecycle in iOS">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="View Lifecycle in iOS">
-                  View Lifecycle in iOS
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-        <article class="m-article-card {{post_class}}">
-          <div class="m-article-card__info">
-            <p class="m-article-card__tag">Long</p>
-            <a href="https://candost.blog/ios-application-lifecycle/" class="m-article-card__info-link" aria-label="iOS Application Lifecycle">
-              <div>
-                <h2 class="m-article-card__title js-article-card-title" title="iOS Application Lifecycle">
-                  iOS Application Lifecycle
-                </h2>
-              </div>
-            </a>
-          </div>
-        </article>
-      </div>
-      <h1>
-        Recently published
-      </h1>
-      <div class="l-grid centered">
-      {{!-- The tag below iterates over all the posts --}}
-      {{> "loop"}}
-      </div>
+      <br \>
     </div>
   </div>
 </main>
@@ -328,3 +166,4 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "scripts"}}
   <script defer src="{{asset "js/home.js"}}"></script>
 {{/contentFor}}
+

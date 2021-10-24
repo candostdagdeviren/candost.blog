@@ -25,6 +25,8 @@
   --header-menu-gradient-first-color: rgba(255, 255, 255, 0);
   --header-menu-gradient-secound-color: rgba(255, 255, 255, 1);
   --subscribe-background: whitesmoke;
+  --mektup-color: #345351;
+  --podcast-color: #176C70;
 }
 
 [data-theme="dark"] {
@@ -53,6 +55,8 @@
   --header-menu-gradient-first-color: rgba(17, 17, 17, 0);
   --header-menu-gradient-secound-color: rgba(17, 17, 17, 0.65);
   --subscribe-background: rgba(25, 35, 45);
+  --mektup-color: #fff;
+  --podcast-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
