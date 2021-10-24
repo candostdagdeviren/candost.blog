@@ -1,50 +1,16 @@
 {{!-- The template below includes the markup for each post --}}
-
-{{#foreach posts visibility="all" limit="3"}}
-  {{#is "post"}}
-    <div class="m-recommended-slider__item glide__slide">
-  {{/is}}
-  <article class="m-article-card {{post_class}}">
-    {{#if primary_tag}}
-      <div class="m-article-card__info">
-        <p class="m-article-card__tag">{{primary_tag.name}}</p>
-    {{else}}
-      <div class="m-article-card__info no-tag">
-    {{/if}}
-      <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
-        <div>
-          <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
-            {{title}}
-          </h2>
-        </div>
-      </a>
-    </div>
-  </article>
-  {{#is "post"}}
-    </div>
-  {{/is}}
-  {{else}}
-    <header class="m-heading no-margin">
-      <h3>{{t "No posts found"}}</h3>
-      <p>
-        {{t "Apparently there are no posts at the moment, check again later."}}
-      </p>
-    </header>
-{{/foreach}}
-
-
-<div>
 <ul>
-{{#foreach posts visibility="all" from="4"}}
-  <li class="{{post_class}}">
-      <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
-        <div class="m-article-card__timestamp">
-          <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
-            {{title}}
-          </h2>
-        </div>
-      </a>
-  </li>
+{{#foreach posts visibility="all"}}
+  <div class="{{post_class}}">
+    <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+      <div class="m-article-card__timestamp">
+        <li>
+        <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
+          {{title}}
+        </h2>
+        </li>
+      </div>
+    </a>
+  </div>
 {{/foreach}}
 </ul>
-</div>
