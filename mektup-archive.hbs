@@ -27,17 +27,19 @@ into the {body} of the default.hbs template --}}
   {{!-- Inject styles of the hero image to make it responsive --}}
   {{> hero background=@site.cover_image}}
   <div class="m-hero__content" data-aos="fade-down">
-    <h1 class="m-hero-title bigger">{{@site.title}}</h1>
-    {{#if @site.description}}
-      <p class="m-hero-description bigger">{{@site.description}}</p>
-    {{/if}}
-    <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
+    <h1 class="m-hero-title bigger">Mektup</h1>
+      <p class="m-hero-description bigger">Letters to software engineers who want to become leaders in the software industry.</p>
   </div>
   </section>
   <div class="l-content">
+    <div class="subscribe-form" style="background-color: var(--subscribe-background); padding: 30px 0 20px;">
+      <div class="m-newsletter">
+        <script async data-uid="d184e4a99a" src="https://witty-inventor-176.ck.page/d184e4a99a/index.js"></script>
+      </div>
+    </div>
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
       <div class="l-grid centered">
-        {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
+        {{#get "posts" filter="featured:true+tag:mektup-archive" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
             <div class="m-featured-slider glide js-featured-slider">
               <div class="glide__track" data-glide-el="track">
@@ -132,8 +134,6 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
       </div>
     </div>
-    {{!-- Links to Previous/Next posts --}}
-    {{pagination}}
   </div>
 </main>
 
