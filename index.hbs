@@ -63,7 +63,7 @@ into the {body} of the default.hbs template --}}
 
       <h2>Newest Articles<small style="margin-left: 2em;"><u><a href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
-      {{#foreach posts visibility="all" limit="6"}}
+      {{#foreach posts visibility="all" filter="tags:-book-review-and-notes" limit="6"}}
         <div class="{{post_class}}">
           <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
             <div class="m-article-card__timestamp">
@@ -114,7 +114,7 @@ into the {body} of the default.hbs template --}}
 
       <h2>My Best Articles<small style="margin-left: 2em;"><u><a href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
-        {{#get "posts" filter="tags:article" limit="3" visibility="all"}}
+        {{#get "posts" filter="tags:article" limit="5" visibility="all"}}
             {{#foreach posts}}
                 <div class="{{post_class}}">
               <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
