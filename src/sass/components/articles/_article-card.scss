@@ -164,31 +164,6 @@
   }
 }
 
-.m-article-card__featured {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 26px;
-  right: $mobile-space;
-  width: 24px;
-  height: 24px;
-  color: $black;
-  background-color: $white;
-  border-radius: 50%;
-  z-index: 2;
-
-  @include respond-to('medium') {
-    top: 31px;
-    right: 25px;
-  }
-
-  span {
-    color: inherit;
-    font-size: 0.750rem;
-  }
-}
-
 .m-article-card__info {
   flex: 1;
   position: relative;

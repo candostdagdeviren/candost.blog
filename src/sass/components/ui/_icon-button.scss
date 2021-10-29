@@ -115,36 +115,6 @@
     margin-left: 30px;
   }
 
-  &.in-featured-articles {
-    position: absolute;
-    color: $white;
-    font-size: 0.875rem;
-    width: 40px;
-    height: 40px;
-    bottom: 5px;
-    z-index: 2;
-
-    @include respond-to('medium') {
-      bottom: 26px;
-    }
-
-    &.glide-prev {
-      right: 56px;
-
-      @include respond-to('medium') {
-        right: 76px;
-      }
-    }
-
-    &.glide-next {
-      right: 16px;
-
-      @include respond-to('medium') {
-        right: 36px;
-      }
-    }
-  }
-
   &.in-recommended-articles {
     position: absolute;
     font-size: 0.625rem;
@@ -227,28 +197,6 @@
 
 .rtl {
   .m-icon-button {
-    &.in-featured-articles {
-      &.glide-prev {
-        right: auto;
-        left: 16px;
-
-        @include respond-to('medium') {
-          right: auto;
-          left: 36px;
-        }
-      }
-
-      &.glide-next {
-        right: auto;
-        left: 52px;
-
-        @include respond-to('medium') {
-          right: auto;
-          left: 72px;
-        }
-      }
-    }
-
     &.in-recommended-articles {
       &.glide-prev {
         left: auto;
