@@ -50,101 +50,120 @@ into the {body} of the default.hbs template --}}
 
       <p style="font-size: 1.25rem;">Now, I don't care how many books I read; I take many notes, connect dots and share what I've found.</p><br \>
 
-      <p style="font-size: 1.25rem;">Meanwhile I work as a Software Engineering Team Lead, leading a team of four people working on Payment Systems at <u><a href="https://jimdo.com/" target="_blank">Jimdo</a></u>.</p>
+      <p style="font-size: 1.25rem;">Meanwhile I work as a Software Engineering Team Lead, leading a team of four people working on Payment Systems at <u><a style="color:var(--link-color);" href="https://jimdo.com/" target="_blank">Jimdo</a></u>.</p>
       <br \><br \>
 
       <h2>Want the longer story?</h2>
-      <p style="font-size: 1.25rem;">See <u><a href="https://candost.blog/about/">my "about" page</a></u>.</p>
+      <p style="font-size: 1.25rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/about/">my "about" page</a></u>.</p>
       <br \><br \>
 
       <h2>What am I Doing Now?</h2>
-      <p style="font-size: 1.25rem;">See <u><a href="https://candost.blog/now/">my "now" page</a></u>.</p>
+      <p style="font-size: 1.25rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/now/">my "now" page</a></u>.</p>
       <br \><br \>
 
-      <h2>Newest Articles<small style="margin-left: 2em;"><u><a href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
+      <h2>Newest Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
       {{#foreach posts visibility="all" filter="tags:-book-review-and-notes" limit="6"}}
         <div class="{{post_class}}">
-          <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+          <div class="m-article-card__info-link">
             <div class="m-article-card__timestamp">
               <li>
-              <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
-                <u>{{title}}</u>
-              </h2>
+                <a href="{{url}}" aria-label="{{title}}">
+                  <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                    <u>{{title}}</u>
+                  </h2>
+                </a>
               </li>
             </div>
-          </a>
+          </div>
         </div>
       {{/foreach}}
       </ul>
       <br \>
 
       <div class="home-podcast">
-        <h2 style="color: var(--podcast-color)">Software World with Candost Podcast</h2>
-        <p style="font-size: 1.25rem;"><u><a href="/podcast/">Listen here on my site.</a></u></p><br \><br \>
-        <p style="font-size: 1.25rem;">Subscribe at
-            <u><a href="https://podcasts.apple.com/podcast/software-world-with-candost/id1548135276" target="_blank">Apple</a></u>,
-            <u><a href="https://open.spotify.com/show/2IoILbfQYu4dLiQpjEBKXk" target="_blank">Spotify</a></u>,
-            <u><a href="https://overcast.fm/+obEDOdmUA">Overcast</a></u>,
-            <u><a href="https://pca.st/xoxlydtr" target="_blank">PocketCasts</a></u>,
-            <u><a href="https://www.stitcher.com/podcast/software-world-with-candost" target="_blank">Stitcher</a></u>,
-            <u><a href="https://www.breaker.audio/software-world-with-candost" target="_blank">Breaker</a></u>,
-            <u><a href="https://castbox.fm/channel/Software-World-with-Candost-id3715951" target="_blank">Castbox</a></u>,
-            <u><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy85NjFhN2Q0L3BvZGNhc3QvcnNz" target="_blank">Google Podcasts</a></u>,
-            <u><a href="https://anchor.fm/candost" target="_blank">Anchor</a></u>,
-            <u><a href="https://radiopublic.com/software-world-with-candost-WlDeEJ" target="_blank">RadioPublic</a></u>,
-            or <u><a href="https://anchor.fm/s/961a7d4/podcast/rss">copy the master RSS</a></u> to paste into your favorite player.
-          </p><br \>
-
-          <h3>Newest Episodes</h3>
-          <ul>
-          {{#get "posts" filter="tags:podcast" limit="3" visibility="all"}}
-              {{#foreach posts}}
-                <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
-                    <li>
-                    <h4 class="m-article-card__title js-article-card-title" title="{{title}}">
-                      <u>{{title}}</u>
-                    </h4>
-                    </li>
-                </a>
-              {{/foreach}}
+        <h2>Podcast
+          <small style="margin-left: 2em;">
+            <u><a style="color:var(--link-color);" href="https://candost.blog/podcast/">SEE ALL EPISODES</a></u>
+          </small>
+        </h2>
+        <em><p style="font-size: 1.15rem;">Software World Podcast is a series of interviews with industry experts and knowledge sharing episodes. Each episode uncovers a problem and a journey.</p></em><br \>
+        <h3 style="font-size: 1.3rem;">
+          <p>Latest Episode:
+          {{#get "posts" filter="tags:podcast" limit="1" visibility="all"}}
+            {{#foreach posts}}
+              <a style="color:var(--link-color);" href="{{url}}" aria-label="{{title}}"><u>{{title}}</u></a>
+            {{/foreach}}
           {{/get}}
-        </ul>
+          </p>
+        </h3>
+        <p style="font-size: 1.2rem;">Subscribe at
+            <u><a style="color:var(--link-color);" href="https://podcasts.apple.com/podcast/software-world-with-candost/id1548135276" target="_blank">Apple</a></u>,
+            <u><a style="color:var(--link-color);" href="https://open.spotify.com/show/2IoILbfQYu4dLiQpjEBKXk" target="_blank">Spotify</a></u>, or
+            <u><a style="color:var(--link-color);" href="https://overcast.fm/+obEDOdmUA">Overcast</a></u>.
+          </p><br \>
       </div>
+      <br \>
 
-      <h2>My Best Articles<small style="margin-left: 2em;"><u><a href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
+      <h2>My Best Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
         {{#get "posts" filter="tags:article" limit="5" visibility="all"}}
             {{#foreach posts}}
-                <div class="{{post_class}}">
-              <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
-                <div class="m-article-card__timestamp">
-                  <li>
-                  <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
-                    <u>{{title}}</u>
-                  </h2>
-                  </li>
+              <div class="{{post_class}}">
+                <div class="m-article-card__info-link">
+                  <div class="m-article-card__timestamp">
+                    <li>
+                      <a href="{{url}}" aria-label="{{title}}">
+                        <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                          <u>{{title}}</u>
+                        </h2>
+                      </a>
+                    </li>
+                  </div>
                 </div>
-              </a>
-            </div>
+              </div>
             {{/foreach}}
         {{/get}}
       </ul><br \>
 
-      <h2>Book Notes<small style="margin-left: 2em;"><u><a href="https://candost.blog/book-review-and-notes/">SEE ALL</a></u></small></h2>
+      <h2>Book Notes<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/book-review-and-notes/">SEE ALL</a></u></small></h2>
       <ul>
         {{#get "posts" filter="tags:book-review-and-notes" limit="3" visibility="all"}}
             {{#foreach posts}}
               <div class="{{post_class}}">
-                <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
+                <div class="m-article-card__info-link">
                   <div class="m-article-card__timestamp">
                     <li>
-                    <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
-                      <u>{{title}}</u>
-                    </h2>
+                      <a href="{{url}}" aria-label="{{title}}">
+                        <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                          <u>{{title}}</u>
+                        </h2>
+                      </a>
                     </li>
                   </div>
-                </a>
+                </div>
+              </div>
+            {{/foreach}}
+        {{/get}}
+      </ul><br \>
+
+      <h2>Mektup Archive<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/mektup/">SEE ALL</a></u></small></h2>
+      <em><p style="font-size: 1.15rem;">Every second week, Mektup arrives as letters in the inboxes of software engineers who want to become leaders in the software industry.</p></em><br \>
+      <ul>
+        {{#get "posts" filter="tags:mektup-archive" limit="3" visibility="all"}}
+            {{#foreach posts}}
+              <div class="{{post_class}}">
+                <div class="m-article-card__info-link">
+                  <div class="m-article-card__timestamp">
+                    <li>
+                      <a href="{{url}}" aria-label="{{title}}">
+                        <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                          <u>{{title}}</u>
+                        </h2>
+                      </a>
+                    </li>
+                  </div>
+                </div>
               </div>
             {{/foreach}}
         {{/get}}
