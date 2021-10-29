@@ -37,7 +37,7 @@ into the {body} of the default.hbs template --}}
       </div>
     </div>
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
-      <h2>Archive</h2>
+      <h2 style="text-align:center;">Archive</h2>
       <div class="l-grid centered">
         {{#get "posts" filter="featured:true+tag:mektup-archive" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}

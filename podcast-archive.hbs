@@ -55,7 +55,7 @@ into the {body} of the default.hbs template --}}
       </p>
     </div>
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
-      <h2>Recent Episodes</h2>
+      <h2 style="text-align:center;">Recent Episodes</h2>
       <div class="l-grid centered">
         {{#get "posts" filter="featured:true+tag:software-world-with-candost" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
