@@ -1,5 +1,6 @@
 .m-heading {
   text-align: center;
+  padding-top: 20px;
   margin: 0 auto 40px;
 
   @include respond-to('medium') {
