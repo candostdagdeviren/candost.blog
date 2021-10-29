@@ -4,7 +4,7 @@
   min-height: 365px;
   overflow: hidden;
   padding: 120px 0 35px;
-  background-color: var(--secondary-subtle-color);
+  background-color: var(--background-color);
   @extend .content-centered;
 
   @include respond-to('medium') {

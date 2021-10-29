@@ -24,19 +24,13 @@ into the {body} of the default.hbs template --}}
 {{> header background=@site.cover_image}}
 
 <main class="main-wrap">
-  {{!-- Inject styles of the hero image to make it responsive --}}
-  {{> hero background=@site.cover_image}}
-  <div class="m-hero__content" data-aos="fade-down">
+  <section class="m-hero no-picture" style="background-color: var(--background-color);">
+  <div class="m-hero__content">
     <h1 class="m-hero-title bigger">Software World<small> with Candost</small></h1>
     <p class="m-hero-description bigger">We all have a common goal of solving problems with software.</p>
   </div>
   </section>
   <div class="l-content">
-    <div class="subscribe-form" style="background-color: var(--subscribe-background); padding: 30px 0 20px;">
-      <div class="m-newsletter">
-        <script async data-uid="da63e767e8" src="https://witty-inventor-176.ck.page/da63e767e8/index.js"></script>
-      </div>
-    </div>
     <div class="l-wrapper" style="justify-content: center; display: flex; flex-wrap: wrap;">
       <iframe src="https://embed.podcasts.apple.com/us/podcast/software-world-with-candost/id1548135276?itsct=podcast_box_player&amp;itscg=30200&amp;theme=auto" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 820px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
       <br \>
@@ -51,7 +45,7 @@ into the {body} of the default.hbs template --}}
           <u><a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy85NjFhN2Q0L3BvZGNhc3QvcnNz" target="_blank">Google Podcasts</a></u>,
           <u><a href="https://anchor.fm/candost" target="_blank">Anchor</a></u>,
           <u><a href="https://radiopublic.com/software-world-with-candost-WlDeEJ" target="_blank">RadioPublic</a></u>,
-          or <u><a href="https://anchor.fm/s/961a7d4/podcast/rss">copy the master RSS</a></u> to paste into your favorite player.
+          or <u><a href="https://anchor.fm/s/961a7d4/podcast/rss">copy the master RSS</a></u> to paste into your favorite player, or subscribe below.
       </p>
     </div>
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
