@@ -34,42 +34,39 @@ into the {body} of the default.hbs template --}}
   </section>
   <div class="l-wrapper">
     <div class="l-wrapper">
-      <h2>I am a software engineer, team leader, and writer.</h2><br \>
+      <h2>I am an engineering manager, software engineer, and writer.</h2><br \>
 
       <p style="font-size: 1.25rem;">I used to think that reading will make me smart.</p><br \>
 
-      <p style="font-size: 1.25rem;">One day, while reading a book, I realized that I've read that exact book before. After that, my life changed.</p><br \>
+      <p style="font-size: 1.25rem;">One day, ten pages before finishing a book, I realized that I had read that same book before. At that point, my life changed.</p><br \>
 
-      <p style="font-size: 1.25rem;">Now, I don't care how many books I read; I take many notes, connect dots and share what I've found.</p><br \>
+      <p style="font-size: 1.25rem;">Now, I don't care how many books I read; I take many notes, connect dots, and share what I've found on this blog and my newsletter.</p><br \>
 
-      <p style="font-size: 1.25rem;">Meanwhile I work as a Software Engineering Team Lead, leading a team of four people working on Payment Systems at <u><a style="color:var(--link-color);" href="https://jimdo.com/" target="_blank">Jimdo</a></u>.</p>
+      <h2>Want the longer story?<small style="margin-left: 1.2em; font-size: 1.1rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/about/">my "about" page</a></u>.</small></h2>
       <br \><br \>
 
-      <h2>Want the longer story?</h2>
-      <p style="font-size: 1.25rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/about/">my "about" page</a></u>.</p>
-      <br \><br \>
-
-      <h2>What am I Doing Now?</h2>
-      <p style="font-size: 1.25rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/now/">my "now" page</a></u>.</p>
+      <h2>What am I Doing Now?<small style="margin-left: 1.2em; font-size: 1.1rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/now/">my "now" page</a></u>.</small></h2>
       <br \><br \>
 
       <h2>Newest Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
-      {{#foreach posts visibility="all" filter="tags:-book-review-and-notes" limit="6"}}
-        <div class="{{post_class}}">
-          <div class="m-article-card__info-link">
-            <div class="m-article-card__timestamp">
-              <li>
-                <a href="{{url}}" aria-label="{{title}}">
-                  <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
-                    <u>{{title}}</u>
-                  </h2>
-                </a>
-              </li>
+      {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast]"}}
+        {{#foreach posts}}
+          <div class="{{post_class}}">
+            <div class="m-article-card__info-link">
+              <div class="m-article-card__timestamp">
+                <li>
+                  <a href="{{url}}" aria-label="{{title}}">
+                    <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                      <u>{{title}}</u>
+                    </h2>
+                  </a>
+                </li>
+              </div>
             </div>
           </div>
-        </div>
-      {{/foreach}}
+        {{/foreach}}
+      {{/get}}
       </ul>
       <br \>
 
@@ -78,6 +75,7 @@ into the {body} of the default.hbs template --}}
       <div class="subscribe-form">
         <div class="m-newsletter" style="margin-left: 0px;">
           <script async data-uid="5802256603" src="https://witty-inventor-176.ck.page/5802256603/index.js"></script>
+          <p style="font-size:0.8em">No spam. No noise. I don't share your email with anyone.</p>
         </div>
       </div>
       <h3 style="font-size: 1.3rem;">
@@ -158,7 +156,7 @@ into the {body} of the default.hbs template --}}
         {{/get}}
       </ul><br \>
 
-      <div class="l-wrapper" style="background-color: var(--subscribe-background); padding:40px; position: relative; letter-spacing: 0.2px; font-size: 1.25rem; font-style: italic;">
+      <div class="l-wrapper" style="background-color: var(--subscribe-background); padding:10px 40px 20px 40px; margin: 0px; position: relative; letter-spacing: 0.2px; font-size: 1.25rem; font-style: italic;">
         <div class="centered">
           <h3>My Favorite Quote</h3>
           <p>“What if the goal was to do better work this week than we did the week before? To make this month better than the last month? For no other reason than because we want to leave the organization in a better state than we found it?” -Simon Sinek</p>
@@ -166,11 +164,15 @@ into the {body} of the default.hbs template --}}
       </div>
 
       <br \>
-    </div>
-  </div>
-  <div class="subscribe-form" style="padding: 30px 0 20px;">
-    <div class="m-newsletter">
-      <script async data-uid="c1c5f8c4cd" src="https://witty-inventor-176.ck.page/c1c5f8c4cd/index.js"></script>
+
+      <h2>Want to reach me?
+        <small style="margin-left: 1.2em; font-size: 1.1rem;">Reach out to me on
+          <u><a style="color:var(--link-color);" href="https://candost.blog/now/">Twitter @candosten</a></u>, on
+          <u><a style="color:var(--link-color);" href="https://superpeer.com/candost/">Superpeer</a></u>, or via
+          <u><a style="color:var(--link-color);" href="https://www.candostdagdeviren.com/contact/">contact form</a></u>.
+        </small>
+      </h2>
+      <br \><br \>
     </div>
   </div>
 </main>
