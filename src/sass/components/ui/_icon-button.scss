@@ -94,27 +94,6 @@
     }
   }
 
-  &.in-pagination-left,
-  &.in-pagination-right {
-    width: 40px;
-    height: 40px;
-    font-size: 0.625rem;
-
-    @include respond-to('medium') {
-      width: 46px;
-      height: 46px;
-      font-size: 0.688rem;
-    }
-  }
-
-  &.in-pagination-left {
-    margin-right: 30px;
-  }
-
-  &.in-pagination-right {
-    margin-left: 30px;
-  }
-
   &.in-recommended-articles {
     position: absolute;
     font-size: 0.625rem;
