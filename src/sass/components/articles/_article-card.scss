@@ -247,12 +247,15 @@
   color: var(--titles-color);
   letter-spacing: 0.2px;
   font-size: 0.875rem;
-  border-bottom: 1px solid var(--primary-border-color);
-  padding-bottom: 20px;
 
   span:nth-child(2) {
     padding: 0 10px;
   }
+}
+
+.m-article-card__timestamp.archive-card {
+  border-bottom: 1px solid var(--primary-border-color);
+  padding-bottom: 20px;
 }
 
 .m-article-card__author-stats {
