@@ -54,40 +54,57 @@ into the {body} of the default.hbs template --}}
       </div>
     </div><br \>
     <div class="l-wrapper">
-      <h2 style="text-align:center; font-size: 1.75rem;">Recent Episodes</h2>
-      <div class="l-grid centered">
-        {{#foreach posts visibility="all"}}
-          {{#is "post"}}
-            <div class="m-recommended-slider__item glide__slide">
-          {{/is}}
-          <article class="m-article-card {{post_class}}">
-            {{#if primary_tag}}
-              <div class="m-article-card__info">
-                <p class="m-article-card__tag">{{primary_tag.name}}</p>
-            {{else}}
-              <div class="m-article-card__info no-tag">
-            {{/if}}
-              <a href="{{url}}" class="m-article-card__info-link" aria-label="{{title}}">
-                <div>
-                  <h2 class="m-article-card__title js-article-card-title" title="{{title}}">
-                    {{title}}
-                  </h2>
+
+      {{!--- Season 2 ---}}
+      <h2 style="font-size: 1.75rem;">Season 2</h2>
+      <div class="centered">
+        <ul>
+          {{#get "posts" filter="tags:hash-season-2-podcast"}}
+            {{#foreach posts}}
+              <div class="{{post_class}}">
+                <div class="m-article-card__info-link">
+                  <div class="m-article-card__timestamp">
+                    <li>
+                      <a href="{{url}}" aria-label="{{title}}">
+                        <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                          <u>{{title}}</u>
+                        </h2>
+                      </a>
+                    </li>
+                  </div>
                 </div>
-              </a>
-            </div>
-          </article>
-          {{#is "post"}}
-            </div>
-          {{/is}}
-          {{else}}
-            <header class="m-heading no-margin">
-              <h3>{{t "No posts found"}}</h3>
-              <p>
-                {{t "Apparently there are no posts at the moment, check again later."}}
-              </p>
-            </header>
-        {{/foreach}}
+              </div>
+            {{/foreach}}
+          {{/get}}
+        </ul>
       </div>
+
+
+      {{!--- Season 1 ---}}
+      <h2 style="font-size: 1.75rem;">Season 1</h2>
+      <div class="centered">
+        <ul>
+          {{#get "posts" filter="tags:hash-season-1-podcast"}}
+            {{#foreach posts}}
+              <div class="{{post_class}}">
+                <div class="m-article-card__info-link">
+                  <div class="m-article-card__timestamp">
+                    <li>
+                      <a href="{{url}}" aria-label="{{title}}">
+                        <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                          <u>{{title}}</u>
+                        </h2>
+                      </a>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+
+
     </div>
   </div>
 </main>
