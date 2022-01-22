@@ -99,7 +99,7 @@ into the {body} of the default.hbs template --}}
         <em><p style="font-size: 1.15rem;">Software World Podcast is a series of interviews with industry experts and knowledge sharing episodes. Each episode uncovers a problem and a journey.</p></em><br \>
         <h3 style="font-size: 1.3rem;">
           <p>Latest Episode:
-          {{#get "posts" filter="tags:podcast" limit="1" visibility="all"}}
+          {{#get "posts" filter="tags:podcast-archive" limit="1" visibility="all"}}
             {{#foreach posts}}
               <a style="color:var(--link-color);" href="{{url}}" aria-label="{{title}}"><u>{{title}}</u></a>
             {{/foreach}}
@@ -137,7 +137,7 @@ into the {body} of the default.hbs template --}}
 
       <h2>Book Notes<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/book-review-and-notes/">SEE ALL</a></u></small></h2>
       <ul>
-        {{#get "posts" filter="tags:book-review-and-notes" limit="3" visibility="all"}}
+        {{#get "posts" filter="tags:book-review-and-notes" limit="5" visibility="all"}}
             {{#foreach posts}}
               <div class="{{post_class}}">
                 <div class="m-article-card__info-link">
