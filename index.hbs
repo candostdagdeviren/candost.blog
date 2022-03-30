@@ -50,7 +50,7 @@ into the {body} of the default.hbs template --}}
 
       <h2>Newest Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
-      {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast]"}}
+      {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast,software-world-with-candost-show]"}}
         {{#foreach posts}}
           <div class="{{post_class}}">
             <div class="m-article-card__info-link">
@@ -160,9 +160,9 @@ into the {body} of the default.hbs template --}}
       <br \>
 
       <h2>Want to reach me?
-        <small style="margin-left: 1.2em; font-size: 1.1rem;">Reach out to me on
-          <u><a style="color:var(--link-color);" href="https://twitter.com/candosten/">Twitter @candosten</a></u>, on
-          <u><a style="color:var(--link-color);" href="https://superpeer.com/candost/">Superpeer</a></u>, or via
+        <small style="margin-left: 1.2em; font-size: 1.1rem;">Send me a tweet or DM on
+          <u><a style="color:var(--link-color);" href="https://twitter.com/candosten/">Twitter @candosten</a></u>, book a call on
+          <u><a style="color:var(--link-color);" href="https://superpeer.com/candost/">Superpeer</a></u>, or use
           <u><a style="color:var(--link-color);" href="https://www.candostdagdeviren.com/contact/">contact form</a></u>.
         </small>
       </h2>
