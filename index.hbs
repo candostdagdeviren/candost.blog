@@ -48,6 +48,27 @@ into the {body} of the default.hbs template --}}
       <h2>What am I Doing Now?<small style="margin-left: 1.2em; font-size: 1.1rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/now/">my "now" page</a></u>.</small></h2>
       <br \><br \>
 
+      <h2>Newsletter<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/mektup/">SEE ARCHIVE</a></u></small></h2>
+      <em><p style="font-size: 1.15rem;">Every second week, <b><u><a style="color:var(--link-color);" href="https://mektup.candost.blog/" target="_blank">Mektup</a></u></b> arrives as letters in the inboxes of software engineers who want to become leaders in the software industry.</p></em><br \>
+      <p style="font-size:1em">In every issue, I talk about the most underrated and the biggest part of software engineering: <u>the non-technical side.</u></p><br \>
+      <div class="subscribe-form">
+        <div class="m-newsletter" style="margin-left: 0px;">
+          <script async data-uid="5802256603" src="https://witty-inventor-176.ck.page/5802256603/index.js"></script>
+          <p style="font-size:0.8em">No spam. No noise. I don't share your email with anyone.</p>
+        </div>
+      </div>
+      <h3 style="font-size: 1.3rem;">
+        <p>Latest Issue:
+        {{#get "posts" filter="tags:mektup-archive" limit="1" visibility="all"}}
+          {{#foreach posts}}
+            <a style="color:var(--link-color);" href="{{url}}" aria-label="{{title}}"><u>{{title}}</u></a>
+          {{/foreach}}
+        {{/get}}
+        </p>
+      </h3>
+
+      <br \>
+
       <h2>Newest Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
       {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast-archive]"}}
@@ -68,26 +89,6 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
       {{/get}}
       </ul>
-      <br \>
-
-      <h2>Newsletter<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/mektup/">SEE ARCHIVE</a></u></small></h2>
-      <em><p style="font-size: 1.15rem;">Every second week, <b><u><a style="color:var(--link-color);" href="https://mektup.candost.blog/" target="_blank">Mektup</a></u></b> arrives as letters in the inboxes of software engineers who want to become leaders in the software industry.</p></em><br \>
-      <div class="subscribe-form">
-        <div class="m-newsletter" style="margin-left: 0px;">
-          <script async data-uid="5802256603" src="https://witty-inventor-176.ck.page/5802256603/index.js"></script>
-          <p style="font-size:0.8em">No spam. No noise. I don't share your email with anyone.</p>
-        </div>
-      </div>
-      <h3 style="font-size: 1.3rem;">
-        <p>Latest Issue:
-        {{#get "posts" filter="tags:mektup-archive" limit="1" visibility="all"}}
-          {{#foreach posts}}
-            <a style="color:var(--link-color);" href="{{url}}" aria-label="{{title}}"><u>{{title}}</u></a>
-          {{/foreach}}
-        {{/get}}
-        </p>
-      </h3>
-
       <br \>
 
       <div class="home-podcast">
@@ -115,7 +116,7 @@ into the {body} of the default.hbs template --}}
       </div>
       <br \>
 
-      <h2>My Best Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
+      <h2>Popular Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
         {{#get "posts" filter="tags:article" limit="5" visibility="all"}}
             {{#foreach posts}}
@@ -160,10 +161,8 @@ into the {body} of the default.hbs template --}}
       <br \>
 
       <h2>Want to reach me?
-        <small style="margin-left: 1.2em; font-size: 1.1rem;">Send me a tweet or DM on
-          <u><a style="color:var(--link-color);" href="https://twitter.com/candosten/">Twitter @candosten</a></u>, book a call on
-          <u><a style="color:var(--link-color);" href="https://superpeer.com/candost/">Superpeer</a></u>, or use
-          <u><a style="color:var(--link-color);" href="https://www.candostdagdeviren.com/contact/">contact form</a></u>.
+        <small style="margin-left: 1.2em; font-size: 1.1rem;">Send me a collaboration request on
+          <u><a style="color:var(--link-color);" href="https://polywork.com/candost/">Polywork</a></u>, send me a tweet on <u><a style="color:var(--link-color);" href="https://twitter.com/candosten/">Twitter @candosten</a></u>, or use <u><a style="color:var(--link-color);" href="https://www.candostdagdeviren.com/contact/">contact form</a></u>.
         </small>
       </h2>
       <br \><br \>
