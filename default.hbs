@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.lang}}">
+<html lang="{{@site.locale}}">
   <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -103,7 +103,7 @@
     {{> footer}}
 
     {{!-- Notifications alerts --}}
-    {{#if @labs.members}}
+    {{#if @site.members_enabled}}
       {{> "notifications"}}
     {{/if}}
 
