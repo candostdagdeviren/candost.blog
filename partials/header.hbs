@@ -16,9 +16,9 @@ This header template is shared across all the pages.
       {{@site.title}}
     </a>
     {{/if}}
-    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="{{t " Open search"}}">
+    <a class="m-icon-button in-mobile-topbar" href="#/search" aria-label="{{t " Open search"}}">
       <span class="icon-search" aria-hidden="true"></span>
-    </button>
+    </a>
   </div>
 
   <div class="m-menu js-menu">
@@ -59,9 +59,9 @@ This header template is shared across all the pages.
             </ul>
           </nav>
           <div class="m-nav__right">
-            <button class="m-icon-button in-menu-main js-open-search" aria-label="{{t " Open search"}}">
+            <a class="m-icon-button in-menu-main" href="#/search/" aria-label="{{t " Open search"}}">
               <span class="icon-search" aria-hidden="true"></span>
-            </button>
+            </a>
             <div class="m-toggle-darkmode js-tooltip" tabindex="0">
               <label for="toggle-darkmode" class="sr-only">
                 {{t "Toggle dark mode"}}
