@@ -77,6 +77,12 @@ into the {body} of the default.hbs template --}}
             <span class="m-heading__meta__time">{{date published_at}}</span>
           </div>
         </header>
+
+        {{#if comments }}
+          <div class="l-wrapper in-post">
+            {{comments title="Comments" count=false mode="auto" saturation=80}}
+          </div>
+        {{/if}}
         <section class="m-subscribe-section">
           <div class="l-wrapper in-post">
             <div class="m-subscribe-section__content">
