@@ -25,9 +25,10 @@ into the {body} of the default.hbs template --}}
 <main class="main-wrap">
   <section class="m-hero no-picture" style="background-color: var(--background-color);">
     <div class="m-hero__content">
-      <h1 class="m-hero-title bigger">The Mektup Archives</h1>
-      <p class="m-hero-description bigger">This is the archives for the Mektup, a newsleter that goes out every second Tuesday and contains letters to software engineers who want to become leaders in the software industry.</p><br \>
-      <p>I publish the letters here for sharing and referencing. However, if you wish to subscribe, you can do so below.</p>
+      <h1 class="m-hero-title bigger">The Mektup</h1>
+      <p class="m-hero-description bigger">Letters to <b>software engineers</b> who want to <b>become leaders in the software industry</b>.</p>
+      <br \>
+      <p class="m-hero-description">Every second Tuesday, I talk about a leadership topic that you can read in 5 to 10 minutes for free.</p>
     </div>
   </section>
   <div class="l-content">
@@ -40,7 +41,7 @@ into the {body} of the default.hbs template --}}
               <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
                 placeholder="{{t "Your email address"}}" required />
             </div>
-            <button id="newsletter-button" class="m-button primary block" type="submit">{{t "Subscribe"}}</button>
+            <button id="newsletter-button" class="m-button primary block" type="submit">Let's grow!</button>
           </div>
           <div class="m-subscribe__success">
             <header class="m-heading no-margin">
@@ -57,7 +58,7 @@ into the {body} of the default.hbs template --}}
             {{t "Oops! There was an error sending the email, please try later."}}
           </p>
         </form>
-        <p style="font-size:0.8em">No spam. No noise. I don't share your email with anyone.</p>
+        <p style="font-size:0.8em">No spam. No noise. I don't share your email with anyone. Unsubscribe at any time.</p>
       </div>
     </div>
     <div class="l-wrapper">
