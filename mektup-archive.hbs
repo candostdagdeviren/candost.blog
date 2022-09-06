@@ -33,7 +33,31 @@ into the {body} of the default.hbs template --}}
   <div class="l-content">
     <div class="subscribe-form" style="padding: 0px 10px 0px;">
       <div class="m-newsletter">
-        <script async data-uid="d184e4a99a" src="https://witty-inventor-176.ck.page/d184e4a99a/index.js"></script>
+        <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+          <div class="m-subscribe__form">
+            <div class="pos-relative">
+              <label for="newsletter-input" class="sr-only">{{t "Your email address"}}</label>
+              <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+                placeholder="{{t "Your email address"}}" required />
+            </div>
+            <button id="newsletter-button" class="m-button primary block" type="submit">{{t "Subscribe"}}</button>
+          </div>
+          <div class="m-subscribe__success">
+            <header class="m-heading no-margin">
+              <img src="{{asset "images/success.png"}}" alt="Success!" class="m-subscribe__success_icon">
+              <p class="m-heading__description in-newsletter-form">
+                {{t "Now check your inbox and click the link to confirm your subscription."}}
+              </p>
+            </header>
+          </div>
+          <p class="m-subscribe__invalid m-small-text">
+            {{t "Please enter a valid email address"}}
+          </p>
+          <p class="m-subscribe__error m-small-text">
+            {{t "Oops! There was an error sending the email, please try later."}}
+          </p>
+        </form>
+        <p style="font-size:0.8em">No spam. No noise. I don't share your email with anyone.</p>
       </div>
     </div>
     <div class="l-wrapper">
@@ -47,6 +71,7 @@ into the {body} of the default.hbs template --}}
                   <a href="{{url}}" aria-label="{{title}}">
                     <h2 style="color:var(--link-color); font-size: 2em;" class="m-article-card__title js-article-card-title" title="{{title}}">
                       <u>{{title}}</u>
+                      <small style="color:var(--primary-foreground-color);">, {{date published_at}}</small>
                     </h2>
                   </a>
                 </li>

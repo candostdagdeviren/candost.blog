@@ -3,6 +3,32 @@ This subscribe template is used to display the form where users can subscribe.
 You need to enable the members feature first.
 --}}
 
-<div class="m-subscribe-section__form">
-  <script async data-uid="b762993b48" src="https://witty-inventor-176.ck.page/b762993b48/index.js"></script>
+<div class="m-subscribe-section__form" style="text-align: center;">
+  <h2>Letters to software engineers who want to <b>become leaders in the software industry.</b></h2>
+  <p>Every second Tuesday, I talk about a leadership topic that you can read in 5 to 10 minutes for free.</p>
+  <br \>
+  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+    <div class="m-subscribe__form">
+      <div class="pos-relative">
+        <label for="newsletter-input" class="sr-only">Email Address</label>
+        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+          placeholder="Email address" required />
+      </div>
+      <button id="newsletter-button" class="m-button primary block" type="submit">Start Growing</button>
+    </div>
+    <div class="m-subscribe__success">
+      <header class="m-heading no-margin">
+        <img src="{{asset "images/success.png"}}" alt="Success!" class="m-subscribe__success_icon">
+        <p class="m-heading__description in-newsletter-form">
+          {{t "Now check your inbox and click the link to confirm your subscription."}}
+        </p>
+      </header>
+    </div>
+    <p class="m-subscribe__invalid m-small-text">
+      {{t "Please enter a valid email address"}}
+    </p>
+    <p class="m-subscribe__error m-small-text">
+      {{t "Oops! There was an error sending the email, please try later."}}
+    </p>
+  </form>
 </div>
