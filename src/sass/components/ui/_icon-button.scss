@@ -106,14 +106,6 @@
     @include respond-to('large') {
       display: none;
     }
-
-    &.glide-prev {
-      left: 0;
-    }
-
-    &.glide-next {
-      right: 0;
-    }
   }
 
   &.as-load-comments {
@@ -169,24 +161,6 @@
         transform-origin: 50% 50%;
         @include transform(rotate(-90deg));
         @include transition(stroke-dashoffset 0.2s);
-      }
-    }
-  }
-}
-
-.rtl {
-  .m-icon-button {
-    &.in-recommended-articles {
-      &.glide-prev {
-        left: auto;
-        right: 0;
-        @include transform(rotate(180deg));
-      }
-
-      &.glide-next {
-        right: auto;
-        left : 0;
-        @include transform(rotate(180deg));
       }
     }
   }

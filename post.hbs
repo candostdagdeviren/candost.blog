@@ -79,8 +79,10 @@ into the {body} of the default.hbs template --}}
         </header>
 
         {{#if comments }}
-          <div class="l-wrapper in-post">
-            {{comments title="Comments" count=false mode="auto" saturation=80}}
+          <div class="m-comments">
+            <div class="l-wrapper in-comments js-native-comments">
+              {{comments title="Comments" count=false mode="auto" saturation=80}}
+            </div>
           </div>
         {{/if}}
         <section class="m-subscribe-section">
