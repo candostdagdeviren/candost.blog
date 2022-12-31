@@ -95,7 +95,7 @@ into the {body} of the default.hbs template --}}
 
       <h2>Newest Articles<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/articles/">SEE ALL</a></u></small></h2>
       <ul>
-      {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast-archive]"}}
+      {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast-archive,micro]"}}
         {{#foreach posts}}
           <div class="{{post_class}}">
             <div class="m-article-card__info-link">
