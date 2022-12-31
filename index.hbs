@@ -116,7 +116,8 @@ into the {body} of the default.hbs template --}}
       <br \>
 
       <h2>Microblogs<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/micro/">SEE ALL</a></u></small></h2>
-      <em><p style="font-size: 1.15rem;">I've been entertaining myself with the idea of microblogging on my blog—like sending tweets, but they are on my blog. Each month's post includes microblogs from that month (sorted chronologically).</p></em>
+      <em><p style="font-size: 1.15rem;">
+        I've been entertaining myself with the idea of microblogging on my blog—like sending tweets, but they are on my blog. Instead of only writing on platforms like Twitter and Mastodon, I share my microblogging on my blog because I don't have any control over those platforms. If they go down, all my words are lost. Additionally, this way will be easier for me to give links to my words.</p></em>
       <ul>
       {{#get "posts" limit="5" filter="tags:[micro]"}}
         {{#foreach posts}}
