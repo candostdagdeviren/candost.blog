@@ -24,23 +24,17 @@ into the {body} of the default.hbs template --}}
 {{> header background=@site.cover_image}}
 
 <main class="main-wrap">
-  {{!-- Inject styles of the hero image to make it responsive --}}
-  {{> hero background=@site.cover_image}}
-  <div class="m-hero__content">
-    <h1 class="m-hero-title bigger">Hey,<br \> I'm Candost.</h1>
-  </div>
-  </section>
   <div class="l-wrapper">
     <div class="l-wrapper">
+      <h1 class="m-hero-title">👋 Hey, I'm Candost.</h1>
+
       <h2>I am a software engineering manager and writer.</h2><br \>
 
       <p style="font-size: 1.25rem;">I used to think reading would help me learn.</p><br \>
 
       <p style="font-size: 1.25rem;">One day, ten pages before finishing a book, I realized I had read that book before. At that point, I decided to change a few things.</p><br \>
 
-      <p style="font-size: 1.25rem;">On this website, you'll find how I evolved, what I learned, and my reflections on the complicated life and world.</p><br \>
-
-      <p style="font-size: 1.25rem;">A few of my articles are upvoted on HackerNews and generated discussions (<a href="https://news.ycombinator.com/item?id=25622149">1</a>, <a href="https://news.ycombinator.com/item?id=31595285">2</a>, <a href="https://news.ycombinator.com/item?id=33107017">3</a>, <a href="https://news.ycombinator.com/item?id=30437733">4</a>, <a href="https://news.ycombinator.com/item?id=29682586">5</a>). That doesn't necessarily make any post better or popular, it's only me pointing you to discussions about the articles.</p><br \>
+      <p style="font-size: 1.25rem;">On this website, you'll find how I evolved, what I learned, and my reflections on the complicated life, software engineering leadership, and world.</p><br \>
 
       <h2>Want the longer story?<small style="margin-left: 1.2em; font-size: 1.1rem;">See <u><a style="color:var(--link-color);" href="https://candost.blog/about/">my "about" page</a></u>.</small></h2>
       <br \><br \>
@@ -49,7 +43,7 @@ into the {body} of the default.hbs template --}}
       <br \><br \>
 
       <h2>Emails<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/mektup/">SEE ALL</a></u></small></h2>
-      <em><p style="font-size: 1.15rem;">Every second Tuesday, I send <b><u><a style="color:var(--link-color);" href="https://candost.blog/mektup/" target="_blank">Mektup</a></u></b>, a newsletter that arrives as casual letters reflecting my learnings and thoughts about software engineering leadership and life.</p></em><br \>
+      <em><p style="font-size: 1.15rem;">Every second Tuesday, I send <b><u><a style="color:var(--link-color);" href="https://candost.blog/mektup/" target="_blank">Mektup</a></u></b>, a newsletter that arrives as casual letters reflecting my learnings and thoughts about software engineering, leadership, productivity, and life.</p></em><br \>
       <p style="font-size:0.8em">I also send notifications of my new blog posts and podcast episodes. You can unsubscribe from any of them separately whenever you want.</p>
       <br \>
       <div class="subscribe-form">
@@ -97,19 +91,17 @@ into the {body} of the default.hbs template --}}
       <ul>
       {{#get "posts" limit="6" filter="tags:-[book-review-and-notes,mektup-archive,podcast-archive,micro]"}}
         {{#foreach posts}}
-          <div class="{{post_class}}">
+          <li class="{{post_class}}" style="list-style-type: none;">
             <div class="m-article-card__info-link">
               <div class="m-article-card__timestamp">
-                <li style="list-style-type: none;">
-                  <a href="{{url}}" aria-label="{{title}}">
-                    <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
-                      <u>{{title}}</u>
-                    </h2>
-                  </a>
-                </li>
+                <a href="{{url}}" aria-label="{{title}}">
+                  <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                    <u>{{title}}</u>
+                  </h2>
+                </a>
               </div>
             </div>
-          </div>
+          </li>
         {{/foreach}}
       {{/get}}
       </ul>
@@ -144,51 +136,52 @@ into the {body} of the default.hbs template --}}
       <ul>
         {{#get "posts" filter="tags:book-review-and-notes" limit="5" visibility="all"}}
             {{#foreach posts}}
-              <div class="{{post_class}}">
+              <li class="{{post_class}}" style="list-style-type: none;">
                 <div class="m-article-card__info-link">
                   <div class="m-article-card__timestamp">
-                    <li style="list-style-type: none;">
-                      <a href="{{url}}" aria-label="{{title}}">
-                        <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
-                          <u>{{title}}</u>
-                        </h2>
-                      </a>
-                    </li>
+                    <a href="{{url}}" aria-label="{{title}}">
+                      <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                        <u>{{title}}</u>
+                      </h2>
+                    </a>
                   </div>
                 </div>
-              </div>
+              </li>
             {{/foreach}}
         {{/get}}
       </ul><br \>
 
       <h2>Microblogs<small style="margin-left: 2em;"><u><a style="color:var(--link-color);" href="https://candost.blog/micro/">SEE ALL</a></u></small></h2>
       <em><p style="font-size: 1.15rem;">
-        I've been entertaining myself with the idea of microblogging on my blog—like sending tweets, but they are on my blog. Instead of only writing on platforms like Twitter and Mastodon, I share my microblogging on my blog because I don't have any control over those platforms. If they go down, all my words are lost. Additionally, this way will be easier for me to give links to my words.</p></em>
+        If Twitter goes down, all my words would be lost if I only share microblogs there. Therefore, instead of writing on platforms like Twitter or Mastodon, I share my microblogging here. I don't send emails for microblogs. They are distributed as a part of Mektup and in RSS.</p></em>
       <ul>
       {{#get "posts" limit="5" filter="tags:[micro]"}}
         {{#foreach posts}}
-          <div class="{{post_class}}">
+          <li class="{{post_class}}" style="list-style-type: none;">
             <div class="m-article-card__info-link">
               <div class="m-article-card__timestamp">
-                <li style="list-style-type: none;">
-                  <a href="{{url}}" aria-label="{{title}}">
-                    <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
-                      <u>{{title}}</u>
-                    </h2>
-                  </a>
-                </li>
+                <a href="{{url}}" aria-label="{{title}}">
+                  <h2 style="color:var(--link-color);" class="m-article-card__title js-article-card-title" title="{{title}}">
+                    <u>{{title}}</u>
+                  </h2>
+                </a>
               </div>
             </div>
-          </div>
+          </li>
         {{/foreach}}
       {{/get}}
       </ul>
 
       <br \>
 
-      <h2>Want to reach me?
-        <small style="margin-left: 1.2em; font-size: 1.1rem;">Send me a collaboration request on
-          <u><a style="color:var(--link-color);" href="https://polywork.com/candost/">Polywork</a></u>or send me a tweet on <u><a style="color:var(--link-color);" href="https://twitter.com/candosten/">Twitter @candosten</a></u>.
+      <h2>Want to reach me?<br \>
+        <small style="margin-left: 1.2em; font-size: 1.1rem;">
+          <p style="font-size: 1.25rem;">
+            <em>Send me an email at candost[(at)]candostdagdeviren[(dot)]com</em>.
+          </p>
+          <br \>
+          Also, you can send me a collaboration request on
+          <u><a style="color:var(--link-color);" href="https://polywork.com/candost/">Polywork</a></u>.
         </small>
       </h2>
       <br \><br \>
