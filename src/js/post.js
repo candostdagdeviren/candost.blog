@@ -24,20 +24,8 @@ const onScrolling = () => {
   requestTicking();
 };
 
-const adjustShare = (timeout) => {
-  if (!isMobile('1023px')) {
-    $('body').removeClass('share-menu-displayed');
-  } else {
-    $('body').addClass('share-menu-displayed');
-    setTimeout(() => {
-      $animationWrapper.removeAttr('data-animate');
-    }, timeout);
-  }
-};
-
 const onResizing = () => {
   setHeights();
-  adjustShare(100);
 
   setTimeout(() => {
     setCircleStyles();
@@ -113,7 +101,6 @@ $(() => {
   fitvids('.js-post-content');
 
   adjustImageGallery();
-  adjustShare(1000);
 
   if ($recommendedSlider.length > 0) {
     const recommendedSwiper = new Swiper('.js-recommended-slider', {

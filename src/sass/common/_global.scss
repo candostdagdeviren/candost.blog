@@ -13,14 +13,6 @@ body {
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  &.share-menu-displayed {
-    padding-bottom: 45px;
-
-    @include respond-to('medium') {
-      padding-bottom: 0;
-    }
-  }
 }
 
 .main-wrap {
