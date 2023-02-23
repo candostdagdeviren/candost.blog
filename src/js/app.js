@@ -210,14 +210,6 @@ $(() => {
     }
   });
 
-  $toggleDarkMode.on('mouseenter', () => {
-    toggleDesktopTopbarOverflow(true);
-  });
-
-  $toggleDarkMode.on('mouseleave', () => {
-    toggleDesktopTopbarOverflow(false);
-  });
-
   $(window).on('click', e => {
     if (submenuIsOpen) {
       if ($submenuOption && !$submenuOption.contains(e.target)) {
